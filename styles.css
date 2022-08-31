@@ -1,0 +1,148 @@
+body {
+	box-sizing: bordder-box;
+	background-color: #ccc;
+	font-family: "Permanent Marker", sans-serif;
+}
+
+.container {
+	margin: 10px auto;
+	max-width: 600px;
+	min-width: 100px;
+	background-color: #eee;
+	border-radius: 20px;
+	box-shadow: 0 0 2px 2px black;
+}
+
+.gallery {
+	padding: 20px;
+}
+
+h1 {
+	font-size: 80px;
+	text-align: center;
+	margin-top: 10px;
+	margin-bottom: 50px;
+}
+
+ul {
+	display: flex;
+	justify-content: space-between;
+}
+
+li,
+span,
+a>img {
+	border-radius: 50%;
+}
+
+li {
+	position: relative;
+	background-color: black;
+	box-shadow: 0 0 2px 2px black;
+}
+
+a>img {
+	height: 120px;
+	width: 120px;
+}
+
+span {
+	display: block;
+	height: 120px;
+	width: 120px;
+	position: absolute;
+	top: 0;
+	text-align: center;
+	font-size: 15px;
+	line-height: 120px;
+	opacity: 0;
+	transition: 0.3s;
+	color: white;
+}
+
+.captainspan {
+	background-color: rgba(0, 0, 150, 0.5);
+}
+
+.hulkspan {
+	background-color: rgba(0, 150, 0, 0.5);
+}
+
+.spidermanspan {
+	background-color: rgba(150, 0, 0, 0.5);
+}
+
+.thorspan {
+	background-color: rgba(0, 150, 150, 0.5);
+}
+
+a:hover span {
+	opacity: 1;
+}
+
+#spiderman img,
+#thor img,
+#hulk img,
+#captain img {
+	display: block;
+	margin: 10px auto;
+	margin-top: 100px;
+	max-height: 60%;
+	box-shadow: 0 0 2px 2px white;
+}
+
+
+#spiderman a,
+#thor a,
+#hulk a,
+#captain a {
+	display: block;
+	width: 20px;
+	margin: auto;
+	border-radius: 50%;
+	background-color: black;
+	padding: 10px;
+	font-size: 30px;
+	line-height: 30px;
+	text-decoration: none;
+	color: white;
+}
+
+.overlay {
+	width: 0;
+	height: 0;
+	overflow: hidden;
+	position: fixed;
+	background-color: rgba(0, 0, 0, 0);
+	z-index: 10;
+	transition: 0.5s ease-in-out;
+}
+
+.overlay:target {
+	width: auto;
+	height: auto;
+	bottom: 0;
+	left: 0;
+	top: 0;
+	right: 0;
+	background-color: rgba(0, 0, 0, 0.7);
+}
+
+.overlay:target img {
+	animation: fading 1s;
+}
+
+.overlay:target a {
+	animation: fading 1s;
+}
+
+@keyframes fading {
+	0% {
+		transform: scale(0);
+		opacity: 0;
+	}
+
+	100% {
+		transform: scale(1.0);
+	}
+}
