@@ -5,12 +5,7 @@ body {
 }
 
 .container {
-	margin: 10px auto;
-	max-width: 600px;
-	min-width: 100px;
-	background-color: #eee;
-	border-radius: 20px;
-	box-shadow: 0 0 2px 2px black;
+	
 }
 
 .gallery {
@@ -20,13 +15,21 @@ body {
 h1 {
 	font-size: 80px;
 	text-align: center;
-	margin-top: 10px;
-	margin-bottom: 50px;
+	margin-top: 20px;
+	margin-bottom: 30px;
 }
 
 ul {
 	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
 	justify-content: space-between;
+	margin: 10px auto;
+	padding: 10px;
+	max-width: 600px;
+	background-color: #eee;
+	border-radius: 20px;
+	box-shadow: 0 0 2px 2px black;
 }
 
 li,
@@ -39,6 +42,7 @@ li {
 	position: relative;
 	background-color: black;
 	box-shadow: 0 0 2px 2px black;
+	margin: 10px;
 }
 
 a>img {
@@ -106,6 +110,7 @@ a:hover span {
 	line-height: 30px;
 	text-decoration: none;
 	color: white;
+	text-align: center;
 }
 
 .overlay {
@@ -145,4 +150,38 @@ a:hover span {
 	100% {
 		transform: scale(1.0);
 	}
+}
+
+@media (max-width: 500px) {
+	ul {
+	width: 200px;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	}
+
+	li {
+	position: relative;
+	background-color: black;
+	box-shadow: 0 0 2px 2px black;
+	margin: 10px;
+	}
+
+	#spiderman a,
+	#thor a,
+	#hulk a,
+	#captain a {
+	display: block;
+	width: 60px;
+	height: 60px;
+	margin: auto;
+	border-radius: 50%;
+	background-color: black;
+	padding: 10px;
+	font-size: 60px;
+	line-height: 60px;
+	text-decoration: none;
+	color: white;
+}
 }
