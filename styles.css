@@ -183,5 +183,16 @@ a:hover span {
 	line-height: 60px;
 	text-decoration: none;
 	color: white;
-}
+	}
+
+	#spiderman img,
+	#thor img,
+	#hulk img,
+	#captain img {
+	display: block;
+	margin: 10px auto;
+	margin-top: 100px;
+	max-height: 40%;
+	box-shadow: 0 0 2px 2px white;
+	}
 }
